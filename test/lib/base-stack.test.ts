@@ -17,7 +17,7 @@ describe("BaseStack", () => {
   const stack = new TestStack(app, "TestStack");
   const template = Template.fromStack(stack);
 
-  it("matches the default snapshot", () => {
+  it("adds resource tags based on package.json values", () => {
     template.hasResourceProperties("AWS::S3::Bucket", {
       Tags: [
         {
