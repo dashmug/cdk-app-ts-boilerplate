@@ -1,0 +1,80 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - "**"
+
+permissions: read-all
+
+jobs:
+  continuous-integration:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.11.0
+        with:
+          access_token: ${{ github.token }}
+
+      - uses: actions/checkout@v3.3.0
+
+      - name: Set up Node 18.x
+        uses: actions/setup-node@v3.6.0
+        with:
+          node-version: "18.x"
+          cache: "yarn"
+
+      - name: Install Node dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Check uncommitted formatting changes
+        run: yarn prettier . --check
+
+      - name: Check for linting errors
+        run: yarn lint
+
+      - name: Check shell scripts
+        run: yarn shellcheck .husky/pre-commit .husky/commit-msg
+
+      - name: Typecheck
+        run: yarn typecheck
+
+      - name: Test
+        run: yarn test --ci
+
+  deployment-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.11.0
+        with:
+          access_token: ${{ github.token }}
+
+      - uses: actions/checkout@v3.3.0
+
+      - name: Set up Node 18.x
+        uses: actions/setup-node@v3.6.0
+        with:
+          node-version: "18.x"
+          cache: "yarn"
+
+      - name: Install Node dependencies for deployment
+        run: yarn install --production
+
+      - name: Synthesize CloudFormation template and assets
+        run: yarn synth
+
+      - name: Check synthesized CloudFormation template with Checkov
+        uses: bridgecrewio/checkov-action@master
+        with:
+          directory: cdk.out
+          framework: cloudformation
+
+      - name: Check Github Actions configuration with Checkov
+        uses: bridgecrewio/checkov-action@master
+        with:
+          directory: .github
+          framework: github_actions

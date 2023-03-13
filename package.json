@@ -1,0 +1,61 @@
+{
+  "name": "cdk-boilerplate",
+  "version": "1.0.0",
+  "description": "Opinionated CDK Typescript Boilerplate",
+  "main": "bin/deploy.ts",
+  "repository": "https://github.com/dashmug/cdk-typescript-boilerplate",
+  "author": "Noel Llevares <dashmug@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "format": "prettier . --ignore-unknown --write",
+    "lint": "eslint . --format=pretty --cache",
+    "typecheck": "tsc",
+    "test": "jest",
+    "synth": "cdk synth --strict --validation",
+    "diff": "cdk diff",
+    "deploy": "cdk deploy --strict --all --require-approval never",
+    "destroy": "cdk destroy"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "17.4.4",
+    "@commitlint/config-conventional": "17.4.4",
+    "@types/aws-lambda": "8.10.111",
+    "@types/jest": "29.4.0",
+    "@types/node": "18.15.0",
+    "@typescript-eslint/eslint-plugin": "5.54.1",
+    "@typescript-eslint/parser": "5.54.1",
+    "eslint": "8.36.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-config-airbnb-typescript": "17.0.0",
+    "eslint-config-prettier": "8.7.0",
+    "eslint-formatter-pretty": "4.1.0",
+    "eslint-import-resolver-typescript": "3.5.3",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-jest": "27.2.1",
+    "eslint-plugin-promise": "6.1.1",
+    "eslint-plugin-security": "1.7.1",
+    "eslint-plugin-sonarjs": "0.18.0",
+    "eslint-plugin-unicorn": "46.0.0",
+    "husky": "8.0.3",
+    "jest": "29.5.0",
+    "lint-staged": "13.2.0",
+    "prettier": "2.8.4",
+    "shellcheck": "2.2.0",
+    "ts-jest": "29.0.5"
+  },
+  "dependencies": {
+    "@tsconfig/node18-strictest": "1.0.0",
+    "aws-cdk": "2.68.0",
+    "aws-cdk-lib": "2.68.0",
+    "cdk-nag": "2.22.33",
+    "constructs": "10.1.275",
+    "ts-node": "10.9.1",
+    "tsconfig-paths": "4.1.2",
+    "typescript": "4.9.5"
+  }
+}
