@@ -1,3 +1,6 @@
+[![CI](https://github.com/dashmug/cdk-app-ts-boilerplate/actions/workflows/ci.yml/badge.svg)](https://github.com/dashmug/cdk-app-ts-boilerplate/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/dashmug/cdk-app-ts-boilerplate/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/dashmug/cdk-app-ts-boilerplate/actions/workflows/github-code-scanning/codeql)
+
 # CDK Typescript Boilerplate
 
 This is an opinionated boilerplate I use for my CDK applications.
