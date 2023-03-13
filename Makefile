@@ -62,7 +62,7 @@ outdated: ## Check for outdated dependencies
 
 .PHONY: clean
 clean: ## Delete artifacts
-	@rm -rf cdk.out
+	@rm -rf .eslintcache cdk.out coverage
 
 
 .PHONY: checks

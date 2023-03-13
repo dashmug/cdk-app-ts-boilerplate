@@ -54,11 +54,6 @@ module.exports = {
             from: "./bin",
             message: 'Main code should not import from "bin/*".',
           },
-          {
-            target: "./test",
-            from: "./bin",
-            message: 'Tests should not import from "bin/*".',
-          },
         ],
       },
     ],
