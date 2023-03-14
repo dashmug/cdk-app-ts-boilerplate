@@ -1,9 +1,11 @@
 [![CI](https://github.com/dashmug/cdk-app-ts-boilerplate/actions/workflows/ci.yml/badge.svg)](https://github.com/dashmug/cdk-app-ts-boilerplate/actions/workflows/ci.yml)
 [![CodeQL](https://github.com/dashmug/cdk-app-ts-boilerplate/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/dashmug/cdk-app-ts-boilerplate/actions/workflows/github-code-scanning/codeql)
 
-# CDK Typescript Boilerplate
+# CDK App Typescript Boilerplate
 
-This is an opinionated boilerplate I use for my CDK applications.
+This is an opinionated boilerplate I use when building [AWS Cloud Development Kit (CDK)](https://aws.amazon.com/cdk/) applications.
+
+For building open-source constructs, I recommend using [`projen`](https://github.com/projen/projen)'s `awscdk-construct` project type.
 
 ## Features
 
@@ -27,7 +29,7 @@ This is an opinionated boilerplate I use for my CDK applications.
 - CDK-specific:
   - Use of project-installed `cdk` instead of a globally-installed one
   - Use `BaseStack` instead of CDK's own `Stack` class to get some
-    standard resource-tagging in place.
+    standard resource-tagging in place
 
 ## Requirements
 
