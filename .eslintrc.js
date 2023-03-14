@@ -12,7 +12,6 @@ module.exports = {
     "plugin:import/recommended",
     "plugin:import/typescript",
     "plugin:sonarjs/recommended",
-    "plugin:security/recommended",
     "plugin:unicorn/recommended",
     "prettier",
   ],
@@ -23,14 +22,7 @@ module.exports = {
     project: "./tsconfig.json",
     tsconfigRootDir: __dirname,
   },
-  plugins: [
-    "@typescript-eslint",
-    "promise",
-    "sonarjs",
-    "security",
-    "unicorn",
-    "import",
-  ],
+  plugins: ["@typescript-eslint", "promise", "sonarjs", "unicorn", "import"],
   settings: {
     "import/resolver": {
       typescript: {
