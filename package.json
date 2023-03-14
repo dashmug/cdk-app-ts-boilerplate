@@ -1,9 +1,9 @@
 {
-  "name": "cdk-boilerplate",
+  "name": "cdk-app-ts-boilerplate",
   "version": "1.0.0",
   "description": "Opinionated CDK Typescript Boilerplate",
   "main": "bin/deploy.ts",
-  "repository": "https://github.com/dashmug/cdk-typescript-boilerplate",
+  "repository": "https://github.com/dashmug/cdk-app-ts-boilerplate",
   "author": "Noel Llevares <dashmug@gmail.com>",
   "license": "MIT",
   "private": true,

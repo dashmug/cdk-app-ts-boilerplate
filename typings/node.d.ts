@@ -5,5 +5,6 @@ declare namespace NodeJS {
     AWS_REGION: string;
     CDK_DEFAULT_ACCOUNT: string;
     CDK_DEFAULT_REGION: string;
+    GITHUB_SHA: string;
   }
 }

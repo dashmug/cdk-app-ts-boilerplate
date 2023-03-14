@@ -21,19 +21,35 @@ describe("BaseStack", () => {
     template.hasResourceProperties("AWS::S3::Bucket", {
       Tags: [
         {
-          Key: "Application",
-          Value: "cdk-boilerplate",
-        },
-        {
-          Key: "Description",
+          Key: "myorg:application:description",
           Value: "Opinionated CDK Typescript Boilerplate",
         },
         {
-          Key: "Repository",
-          Value: "https://github.com/dashmug/cdk-typescript-boilerplate",
+          Key: "myorg:application:environment",
+          Value: "prod",
         },
         {
-          Key: "Stack",
+          Key: "myorg:application:name",
+          Value: "cdk-app-ts-boilerplate",
+        },
+        {
+          Key: "myorg:application:repository",
+          Value: "https://github.com/dashmug/cdk-app-ts-boilerplate",
+        },
+        {
+          Key: "myorg:project:customer",
+          Value: "myclient",
+        },
+        {
+          Key: "myorg:project:name",
+          Value: "myproject",
+        },
+        {
+          Key: "myorg:project:owner",
+          Value: "myteam",
+        },
+        {
+          Key: "myorg:stack:name",
           Value: "TestStack",
         },
       ],
