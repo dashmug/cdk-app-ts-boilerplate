@@ -17,7 +17,7 @@ describe("BaseStack", () => {
   const stack = new TestStack(app, "TestStack");
   const template = Template.fromStack(stack);
 
-  it("adds resource tags based on package.json values", () => {
+  it("adds the correct resource tags", () => {
     template.hasResourceProperties("AWS::S3::Bucket", {
       Tags: [
         {
