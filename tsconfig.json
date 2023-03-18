@@ -7,7 +7,8 @@
     "baseUrl": ".",
     "checkJs": true,
     "resolveJsonModule": true,
-    "typeRoots": ["./node_modules/@types", "./typings"]
+    "typeRoots": ["./node_modules/@types", "./typings"],
+    "ignoreDeprecations": "5.0"
   },
   "include": ["**/*.ts", "**.js", "**/*.js"],
   "exclude": ["node_modules", "cdk.out", "coverage"],

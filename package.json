@@ -24,8 +24,8 @@
   "devDependencies": {
     "@commitlint/cli": "17.4.4",
     "@commitlint/config-conventional": "17.4.4",
-    "@types/aws-lambda": "8.10.111",
-    "@types/jest": "29.4.1",
+    "@types/aws-lambda": "8.10.114",
+    "@types/jest": "29.5.0",
     "@types/node": "18.15.3",
     "@typescript-eslint/eslint-plugin": "5.55.0",
     "@typescript-eslint/parser": "5.55.0",
@@ -49,12 +49,12 @@
   },
   "dependencies": {
     "@tsconfig/node18-strictest": "1.0.0",
-    "aws-cdk": "2.68.0",
-    "aws-cdk-lib": "2.68.0",
-    "cdk-nag": "2.22.35",
-    "constructs": "10.1.277",
+    "aws-cdk": "2.69.0",
+    "aws-cdk-lib": "2.69.0",
+    "cdk-nag": "2.23.2",
+    "constructs": "10.1.281",
     "ts-node": "10.9.1",
     "tsconfig-paths": "4.1.2",
-    "typescript": "4.9.5"
+    "typescript": "5.0.2"
   }
 }

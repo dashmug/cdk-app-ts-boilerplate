@@ -30,6 +30,7 @@ For building open-source constructs, I recommend using [`projen`](https://github
   - Use of project-installed `cdk` instead of a globally-installed one
   - Use `BaseStack` instead of CDK's own `Stack` class to get some
     standard resource-tagging in place
+  -
 
 ## Requirements
 
