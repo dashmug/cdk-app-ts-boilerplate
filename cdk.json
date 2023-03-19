@@ -1,18 +1,7 @@
 {
   "app": "ts-node --prefer-ts-exts bin/app.ts",
   "watch": {
-    "include": ["**"],
-    "exclude": [
-      "README.md",
-      "cdk*.json",
-      "**/*.d.ts",
-      "**/*.js",
-      "tsconfig.json",
-      "package*.json",
-      "yarn.lock",
-      "node_modules",
-      "test"
-    ]
+    "include": ["bin/*.ts", "src/**/*.ts"]
   },
   "context": {
     "@aws-cdk/aws-lambda:recognizeLayerVersion": true,

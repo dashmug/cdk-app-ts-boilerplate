@@ -20,7 +20,7 @@ For building open-source constructs, I recommend using [`projen`](https://github
 - `shellcheck` for checking shell scripts
 - For VSCode users:
   - Recommended extensions
-  - Pre-configured settings
+  - Pre-configured settings and launch configurations for debugging
 - For Linux/Mac users:
   - `Makefile` with pre-configured commands for convenience
 - For Github:
@@ -30,7 +30,6 @@ For building open-source constructs, I recommend using [`projen`](https://github
   - Use of project-installed `cdk` instead of a globally-installed one
   - Use `BaseStack` instead of CDK's own `Stack` class to get some
     standard resource-tagging in place
-  -
 
 ## Requirements
 
