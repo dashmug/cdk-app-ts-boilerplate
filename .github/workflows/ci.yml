@@ -19,7 +19,7 @@ jobs:
         with:
           access_token: ${{ github.token }}
 
-      - uses: actions/checkout@v3.4.0
+      - uses: actions/checkout@v3.5.0
 
       - name: Set up Node 18.x
         uses: actions/setup-node@v3.6.0
@@ -53,7 +53,7 @@ jobs:
         with:
           access_token: ${{ github.token }}
 
-      - uses: actions/checkout@v3.4.0
+      - uses: actions/checkout@v3.5.0
 
       - name: Set up Node 18.x
         uses: actions/setup-node@v3.6.0
