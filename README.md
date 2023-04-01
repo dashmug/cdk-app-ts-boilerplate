@@ -26,10 +26,12 @@ For building open-source constructs, I recommend using [`projen`](https://github
 - For Github:
   - Built-in dependabot config
   - Built-in Github Actions workflows for pull requests and `main` branch
+  - Scanning for cloud infrastructure misconfigurations via `checkov`
 - CDK-specific:
   - Use of project-installed `cdk` instead of a globally-installed one
   - Use `BaseStack` instead of CDK's own `Stack` class to get some
     standard resource-tagging in place
+  - Use of `cdk-nag` to statically check if best practices are followed
 
 ## Requirements
 

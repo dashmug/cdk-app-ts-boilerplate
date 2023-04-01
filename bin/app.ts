@@ -8,6 +8,7 @@ const app = new cdk.App();
 
 new MyProjectStack(app, "MyProject");
 
+// Add cdk-nag's AWS Solutions checks to the app.
 Aspects.of(app).add(new AwsSolutionsChecks());
 
 app.synth();
