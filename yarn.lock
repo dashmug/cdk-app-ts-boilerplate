@@ -1715,10 +1715,10 @@ confusing-browser-globals@^1.0.10:
   resolved "https://registry.yarnpkg.com/confusing-browser-globals/-/confusing-browser-globals-1.0.11.tgz#ae40e9b57cdd3915408a2805ebd3a5585608dc81"
   integrity sha512-JsPKdmh8ZkmnHxDk55FZ1TqVLvEQTvoByJZRN9jzI0UjxK/QgAmsphz7PGtqgPieQZ/CQcHWXCR7ATDNhGe+YA==
 
-constructs@10.1.305:
-  version "10.1.305"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.305.tgz#b76aa967689869e4d9830f645520016f1f367f17"
-  integrity sha512-Dlv6/pAevgTRAiHB7z77dZD3523+FNKX2Qg65FIcNrAakllcgA69dql+j9X4Y3+JXUhQlfliys72kVAk+Ah3KA==
+constructs@10.1.306:
+  version "10.1.306"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.306.tgz#07c361f56eff42bae9338c65587b9dede4d1f4f6"
+  integrity sha512-7UruYLZLOk7qN9fQRX339iluZnqLVEPg8jSiKmKtehY4Sk0V91AOCe8/YccpYYTsMud3EKha8TT1zJa5SJPQug==
 
 conventional-changelog-angular@^5.0.11:
   version "5.0.13"
