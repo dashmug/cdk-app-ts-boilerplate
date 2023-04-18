@@ -17,7 +17,6 @@ For building open-source constructs, I recommend using [`projen`](https://github
 - Standard unit testing setup using `jest`
 - Git hooks via `husky` and `link-staged`
 - Standard commit messages using `commitlint`
-- `shellcheck` for checking shell scripts
 - For VSCode users:
   - Recommended extensions
   - Pre-configured settings and launch configurations for debugging
@@ -27,6 +26,7 @@ For building open-source constructs, I recommend using [`projen`](https://github
   - Built-in dependabot config
   - Built-in Github Actions workflows for pull requests and `main` branch
   - Scanning for cloud infrastructure misconfigurations via `checkov`
+  - `shellcheck` for checking shell scripts
 - CDK-specific:
   - Use of project-installed `cdk` instead of a globally-installed one
   - Use `BaseStack` instead of CDK's own `Stack` class to get some

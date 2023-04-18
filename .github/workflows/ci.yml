@@ -37,7 +37,11 @@ jobs:
         run: yarn lint
 
       - name: Check shell scripts
-        run: yarn shellcheck .husky/pre-commit .husky/commit-msg
+        uses: ludeeus/action-shellcheck@2.0.0
+        with:
+          ignore_paths: >-
+            .husky/_
+            node_modules
 
       - name: Typecheck
         run: yarn typecheck
