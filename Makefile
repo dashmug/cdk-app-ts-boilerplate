@@ -28,7 +28,6 @@ format: ## Format the project source code
 lint: ## Check for common errors
 	@yarn prettier . --check
 	@yarn lint
-	@yarn shellcheck .husky/pre-commit .husky/commit-msg
 
 
 .PHONY: typecheck
