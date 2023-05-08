@@ -1513,10 +1513,10 @@ case@1.6.3:
   resolved "https://registry.yarnpkg.com/case/-/case-1.6.3.tgz#0a4386e3e9825351ca2e6216c60467ff5f1ea1c9"
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
-cdk-nag@2.25.15:
-  version "2.25.15"
-  resolved "https://registry.yarnpkg.com/cdk-nag/-/cdk-nag-2.25.15.tgz#dcb93a5b5b356b1604b6e7bbe9361661b5ef75d2"
-  integrity sha512-Dv2AIQLF2KreA4SId7Q0M7N3JjuM4INNZpPVuArN3gHnVAF/IyJXydc456t9LRy6ThgZDIJ07zcwUQpz4rgiRg==
+cdk-nag@2.26.18:
+  version "2.26.18"
+  resolved "https://registry.yarnpkg.com/cdk-nag/-/cdk-nag-2.26.18.tgz#9daa3c951702c8fae5b99c57b234847b44c792b5"
+  integrity sha512-DGk3C9/AT0ocZhHKFhE1APrw7LBgL+WKjK44YjDmB72k20gUv8WbSG5sSffSS1lOiI+i5Ny7X4nyDQh/TOkymw==
 
 chalk@5.2.0:
   version "5.2.0"
