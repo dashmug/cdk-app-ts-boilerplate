@@ -52,7 +52,7 @@
     "aws-cdk": "2.86.0",
     "aws-cdk-lib": "2.86.0",
     "cdk-nag": "2.27.57",
-    "constructs": "10.2.66",
+    "constructs": "10.2.67",
     "ts-node": "10.9.1",
     "tsconfig-paths": "4.2.0",
     "typescript": "5.1.6"
