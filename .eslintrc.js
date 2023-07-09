@@ -6,8 +6,8 @@ module.exports = {
   extends: [
     "eslint:recommended",
     "airbnb-base",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:@typescript-eslint/recommended-type-checked",
+    "plugin:@typescript-eslint/stylistic-type-checked",
     "airbnb-typescript/base",
     "plugin:import/recommended",
     "plugin:import/typescript",
@@ -20,7 +20,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module",
-    project: "./tsconfig.json",
+    project: true,
     tsconfigRootDir: __dirname,
   },
   plugins: [
@@ -41,11 +41,9 @@ module.exports = {
     },
   },
   rules: {
-    "@typescript-eslint/no-use-before-define": "off",
     "no-console": ["error", { allow: ["info", "warn", "error"] }],
     "no-new": "off",
     "no-restricted-syntax": "off",
-    "import/no-default-export": "error",
     "import/no-restricted-paths": [
       "error",
       {
@@ -59,6 +57,8 @@ module.exports = {
       },
     ],
     "import/prefer-default-export": "off",
+    // https://github.com/sindresorhus/eslint-plugin-unicorn/issues/2175
+    "unicorn/no-empty-file": "off",
     "unicorn/prevent-abbreviations": [
       "error",
       {
