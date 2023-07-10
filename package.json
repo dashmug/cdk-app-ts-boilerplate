@@ -49,7 +49,7 @@
   },
   "dependencies": {
     "@tsconfig/node18-strictest": "1.0.0",
-    "aws-cdk": "2.86.0",
+    "aws-cdk": "2.87.0",
     "aws-cdk-lib": "2.86.0",
     "cdk-nag": "2.27.57",
     "constructs": "10.2.66",
