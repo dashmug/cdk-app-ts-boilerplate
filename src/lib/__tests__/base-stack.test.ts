@@ -1,6 +1,7 @@
-import { App, StackProps } from "aws-cdk-lib";
+import { App, type StackProps } from "aws-cdk-lib";
 import { Template } from "aws-cdk-lib/assertions";
 import { Bucket } from "aws-cdk-lib/aws-s3";
+import { Queue } from "aws-cdk-lib/aws-sqs";
 import type { Construct } from "constructs";
 import { BaseStack } from "src/lib/base-stack";
 
@@ -9,6 +10,7 @@ class TestStack extends BaseStack {
     super(scope, id, props);
 
     new Bucket(this, "Bucket");
+    new Queue(this, "Queue");
   }
 }
 
@@ -54,5 +56,9 @@ describe("BaseStack", () => {
         },
       ],
     });
+  });
+
+  it("generates an expected CloudFormation template", () => {
+    expect(template).toMatchSnapshot();
   });
 });

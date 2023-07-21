@@ -1,0 +1,124 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseStack generates an expected CloudFormation template 1`] = `
+{
+  "Parameters": {
+    "BootstrapVersion": {
+      "Default": "/cdk-bootstrap/hnb659fds/version",
+      "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]",
+      "Type": "AWS::SSM::Parameter::Value<String>",
+    },
+  },
+  "Resources": {
+    "Bucket83908E77": {
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "Tags": [
+          {
+            "Key": "myorg:application:description",
+            "Value": "Opinionated CDK Typescript Boilerplate",
+          },
+          {
+            "Key": "myorg:application:environment",
+            "Value": "prod",
+          },
+          {
+            "Key": "myorg:application:name",
+            "Value": "cdk-app-ts-boilerplate",
+          },
+          {
+            "Key": "myorg:application:repository",
+            "Value": "https://github.com/dashmug/cdk-app-ts-boilerplate",
+          },
+          {
+            "Key": "myorg:project:customer",
+            "Value": "myclient",
+          },
+          {
+            "Key": "myorg:project:name",
+            "Value": "myproject",
+          },
+          {
+            "Key": "myorg:project:owner",
+            "Value": "myteam",
+          },
+          {
+            "Key": "myorg:stack:name",
+            "Value": "TestStack",
+          },
+        ],
+      },
+      "Type": "AWS::S3::Bucket",
+      "UpdateReplacePolicy": "Retain",
+    },
+    "Queue4A7E3555": {
+      "DeletionPolicy": "Delete",
+      "Properties": {
+        "Tags": [
+          {
+            "Key": "myorg:application:description",
+            "Value": "Opinionated CDK Typescript Boilerplate",
+          },
+          {
+            "Key": "myorg:application:environment",
+            "Value": "prod",
+          },
+          {
+            "Key": "myorg:application:name",
+            "Value": "cdk-app-ts-boilerplate",
+          },
+          {
+            "Key": "myorg:application:repository",
+            "Value": "https://github.com/dashmug/cdk-app-ts-boilerplate",
+          },
+          {
+            "Key": "myorg:project:customer",
+            "Value": "myclient",
+          },
+          {
+            "Key": "myorg:project:name",
+            "Value": "myproject",
+          },
+          {
+            "Key": "myorg:project:owner",
+            "Value": "myteam",
+          },
+          {
+            "Key": "myorg:stack:name",
+            "Value": "TestStack",
+          },
+        ],
+      },
+      "Type": "AWS::SQS::Queue",
+      "UpdateReplacePolicy": "Delete",
+    },
+  },
+  "Rules": {
+    "CheckBootstrapVersion": {
+      "Assertions": [
+        {
+          "Assert": {
+            "Fn::Not": [
+              {
+                "Fn::Contains": [
+                  [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                  ],
+                  {
+                    "Ref": "BootstrapVersion",
+                  },
+                ],
+              },
+            ],
+          },
+          "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI.",
+        },
+      ],
+    },
+  },
+}
+`;
