@@ -15,29 +15,30 @@ help: ## Show help (default)
 
 .PHONY: install
 install: ## Install node dependencies
-	@yarn install
+	@pnpm install
+	@pnpm husky install
 
 
 .PHONY: format
 format: ## Format the project source code
-	@yarn format
-	@yarn lint --fix
+	@pnpm format
+	@pnpm lint --fix
 
 
 .PHONY: lint
 lint: ## Check for common errors
-	@yarn prettier . --check
-	@yarn lint
+	@pnpm prettier . --check
+	@pnpm lint
 
 
 .PHONY: typecheck
 typecheck: ## Check static type annotations
-	@yarn typecheck
+	@pnpm typecheck
 
 
 .PHONY: synth
 synth: ## Synthesize deployment code
-	@yarn synth
+	@pnpm synth
 
 
 .PHONY: build
@@ -46,17 +47,17 @@ build: synth ## Synthesize deployment code (alias of `synth`)
 
 .PHONY: test
 test: ## Execute unit tests
-	@yarn test
+	@pnpm test
 
 
 .PHONY: deploy
 deploy: ## Deploy infrastructure
-	@yarn deploy
+	@pnpm deploy
 
 
 .PHONY: outdated
 outdated: ## Check for outdated dependencies
-	@yarn outdated
+	@pnpm outdated
 
 
 .PHONY: clean

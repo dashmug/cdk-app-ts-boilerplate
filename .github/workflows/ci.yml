@@ -21,20 +21,24 @@ jobs:
 
       - uses: actions/checkout@v3.5.3
 
+      - uses: pnpm/action-setup@v2.2.4
+        with:
+          version: 8.6.5
+
       - name: Set up Node 18.x
         uses: actions/setup-node@v3.7.0
         with:
           node-version: "18.x"
-          cache: "yarn"
+          cache: "pnpm"
 
       - name: Install Node dependencies
-        run: yarn install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Check uncommitted formatting changes
-        run: yarn prettier . --check
+        run: pnpm prettier . --check
 
       - name: Check for linting errors
-        run: yarn lint
+        run: pnpm lint
 
       - name: Check shell scripts
         uses: ludeeus/action-shellcheck@2.0.0
@@ -44,10 +48,10 @@ jobs:
             node_modules
 
       - name: Typecheck
-        run: yarn typecheck
+        run: pnpm typecheck
 
       - name: Test
-        run: yarn test --ci
+        run: pnpm test -- --ci
 
   deployment-check:
     runs-on: ubuntu-latest
@@ -59,17 +63,21 @@ jobs:
 
       - uses: actions/checkout@v3.5.3
 
+      - uses: pnpm/action-setup@v2.2.4
+        with:
+          version: 8.6.5
+
       - name: Set up Node 18.x
         uses: actions/setup-node@v3.7.0
         with:
           node-version: "18.x"
-          cache: "yarn"
+          cache: "pnpm"
 
       - name: Install Node dependencies for deployment
-        run: yarn install --production
+        run: pnpm install --production
 
       - name: Synthesize CloudFormation template and assets
-        run: yarn synth
+        run: pnpm synth
 
       - name: Check synthesized CloudFormation template with Checkov
         uses: bridgecrewio/checkov-action@master
