@@ -13,6 +13,7 @@
       "name": "Debug Jest Tests",
       "type": "node",
       "request": "launch",
+      "runtimeExecutable": "sh",
       "runtimeArgs": [
         "--inspect-brk",
         "${workspaceRoot}/node_modules/.bin/jest",
