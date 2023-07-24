@@ -21,7 +21,6 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
     project: true,
-    tsconfigRootDir: __dirname,
   },
   plugins: [
     "@typescript-eslint",
