@@ -50,7 +50,7 @@
     "@tsconfig/node18": "18.2.0",
     "aws-cdk": "2.88.0",
     "aws-cdk-lib": "2.88.0",
-    "cdk-nag": "2.27.76",
+    "cdk-nag": "2.27.86",
     "constructs": "10.2.69",
     "ts-node": "10.9.1",
     "tsconfig-paths": "4.2.0",
