@@ -9,8 +9,10 @@ module.exports = {
     "plugin:@typescript-eslint/recommended-type-checked",
     "plugin:@typescript-eslint/stylistic-type-checked",
     "airbnb-typescript/base",
+    "plugin:n/recommended",
     "plugin:import/recommended",
     "plugin:import/typescript",
+    "plugin:promise/recommended",
     "plugin:sonarjs/recommended",
     "plugin:unicorn/recommended",
     "plugin:security/recommended",
@@ -56,6 +58,8 @@ module.exports = {
       },
     ],
     "import/prefer-default-export": "off",
+    // https://github.com/eslint-community/eslint-plugin-n/issues/84
+    "n/no-missing-import": "off",
     // https://github.com/sindresorhus/eslint-plugin-unicorn/issues/2175
     "unicorn/no-empty-file": "off",
     "unicorn/prevent-abbreviations": [
