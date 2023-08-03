@@ -14,6 +14,7 @@
       "source.organizeImports": true
     }
   },
-  "jest.jestCommandLine": "yarn test",
+  "jest.autoRun": "off",
+  "jest.jestCommandLine": "pnpm test",
   "jest.rootPath": "."
 }
