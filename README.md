@@ -10,8 +10,8 @@ For building open-source constructs, I recommend using [`projen`](https://github
 ## Features
 
 - Latest (best-effort) versions of dependencies
-- Package management using `yarn`
-- Strict Typescript config (using [`@tsconfig/node18-strictest`](https://github.com/tsconfig/bases#node-18--strictest-tsconfigjson))
+- Package management using `pnpm`
+- Strict Typescript config
 - Auto-formatting via `prettier`
 - Strict(ish) linting rules enforced by `eslint`
 - Standard unit testing setup using `jest`
@@ -20,7 +20,7 @@ For building open-source constructs, I recommend using [`projen`](https://github
 - For VSCode users:
   - Recommended extensions
   - Pre-configured settings and launch configurations for debugging
-- For Linux/Mac users:
+- For Linux/Mac/WSL users:
   - `Makefile` with pre-configured commands for convenience
 - For Github:
   - Built-in dependabot config
@@ -36,11 +36,11 @@ For building open-source constructs, I recommend using [`projen`](https://github
 ## Requirements
 
 - Node 18+
-- [Yarn](https://classic.yarnpkg.com/en/docs/install) package manager
+- [pnpm](https://pnpm.io/) for package management
 
 ## Git Hooks
 
-A few git hooks are set up during the project setup process (`yarn install`).
+A few git hooks are set up during the project setup process (`pnpm install`).
 
 1. A `pre-commit` hook that runs some checks depending on the staged
    files. The hook itself is found at `.husky/pre-commit`.

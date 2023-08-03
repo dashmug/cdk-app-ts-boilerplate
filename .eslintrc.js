@@ -72,7 +72,21 @@ module.exports = {
   },
   overrides: [
     {
-      files: ["test/**/*.ts"],
+      files: ["src/stacks/**/*.ts"],
+      rules: {
+        "no-restricted-syntax": [
+          "error",
+          {
+            selector:
+              "MemberExpression[object.name='process'][property.name='env']",
+            message:
+              "Usage of environment variables are not allowed inside Stacks. Pass them as StackProps instead from `./bin/app.ts`.",
+          },
+        ],
+      },
+    },
+    {
+      files: ["**/__tests__/**/*.test.ts"],
       plugins: ["jest"],
       extends: ["plugin:jest/recommended"],
       rules: {
