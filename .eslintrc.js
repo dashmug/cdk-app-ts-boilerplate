@@ -60,8 +60,6 @@ module.exports = {
     "import/prefer-default-export": "off",
     // https://github.com/eslint-community/eslint-plugin-n/issues/84
     "n/no-missing-import": "off",
-    // https://github.com/sindresorhus/eslint-plugin-unicorn/issues/2175
-    "unicorn/no-empty-file": "off",
     "unicorn/prevent-abbreviations": [
       "error",
       {
