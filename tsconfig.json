@@ -1,5 +1,5 @@
 {
-  "extends": "@tsconfig/node18/tsconfig.json",
+  "extends": "@tsconfig/node20/tsconfig.json",
   "compilerOptions": {
     "sourceMap": true,
     "removeComments": true,
@@ -7,7 +7,6 @@
     "baseUrl": ".",
     "resolveJsonModule": true,
     "typeRoots": ["./node_modules/@types", "./typings"],
-    "strict": true,
     "allowUnusedLabels": false,
     "allowUnreachableCode": false,
     "exactOptionalPropertyTypes": true,
@@ -18,10 +17,7 @@
     "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "checkJs": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "checkJs": true
   },
   "include": ["**/*.ts", "**.js", "**/*.js"],
   "exclude": ["node_modules", "cdk.out", "coverage"],

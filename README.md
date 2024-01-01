@@ -35,7 +35,7 @@ For building open-source constructs, I recommend using [`projen`](https://github
 
 ## Requirements
 
-- Node 18+
+- Node 20+
 - [pnpm](https://pnpm.io/) for package management
 
 ## Git Hooks

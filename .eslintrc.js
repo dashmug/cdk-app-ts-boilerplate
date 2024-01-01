@@ -15,7 +15,7 @@ module.exports = {
     "plugin:promise/recommended",
     "plugin:sonarjs/recommended",
     "plugin:unicorn/recommended",
-    "plugin:security/recommended",
+    "plugin:security/recommended-legacy",
     "prettier",
   ],
   parser: "@typescript-eslint/parser",
