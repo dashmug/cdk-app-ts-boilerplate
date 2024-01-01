@@ -23,7 +23,6 @@
   "devDependencies": {
     "@commitlint/cli": "18.4.3",
     "@commitlint/config-conventional": "18.4.3",
-    "@tsconfig/node20": "20.1.2",
     "@types/aws-lambda": "8.10.130",
     "@types/jest": "29.5.11",
     "@types/node": "20.10.6",
@@ -48,6 +47,7 @@
     "ts-jest": "29.1.1"
   },
   "dependencies": {
+    "@tsconfig/node20": "20.1.2",
     "aws-cdk": "2.117.0",
     "aws-cdk-lib": "2.117.0",
     "cdk-nag": "2.27.227",
