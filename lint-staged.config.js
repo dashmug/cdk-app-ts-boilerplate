@@ -1,5 +1,5 @@
 module.exports = {
-  "*.js": ["prettier --write", "eslint --format=pretty --quiet --fix --cache"],
+  "*.js": ["prettier --write", "eslint --quiet --fix --cache"],
   "*.ts": () => [
     "pnpm format",
     "pnpm typecheck",
