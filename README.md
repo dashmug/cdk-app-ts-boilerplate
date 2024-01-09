@@ -63,6 +63,7 @@ build        Synthesize deployment code (alias of `synth`)
 test         Execute unit tests
 deploy       Deploy infrastructure
 outdated     Check for outdated dependencies
+upgrade      Upgrade dependencies
 clean        Delete artifacts
 checks       Runs lint, typecheck, and test
 tag          Tags the current commit using CalVer

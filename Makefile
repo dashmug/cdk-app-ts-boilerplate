@@ -60,6 +60,11 @@ outdated: ## Check for outdated dependencies
 	@pnpm outdated
 
 
+.PHONY: upgrade
+upgrade: ## Upgrade dependencies
+	@pnpm upgrade --interactive --latest
+
+
 .PHONY: clean
 clean: ## Delete artifacts
 	@rm -rf .eslintcache cdk.out coverage
