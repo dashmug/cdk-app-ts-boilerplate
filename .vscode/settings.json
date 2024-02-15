@@ -11,10 +11,10 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-      "source.organizeImports": true
+      "source.organizeImports": "explicit"
     }
   },
-  "jest.autoRun": "off",
+  "jest.runMode": "on-demand",
   "jest.jestCommandLine": "pnpm test",
   "jest.rootPath": "."
 }
