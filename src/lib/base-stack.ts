@@ -20,7 +20,8 @@ export abstract class BaseStack extends Stack {
       ...props,
     });
 
-    // Have a read through "Tagging AWS Resources" (https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html)
+    // Have a read through "Tagging AWS Resources"
+    // (https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html)
     // and decide on a tagging strategy that works for you. A few tags
     // are included here to get you started.
     const tags = {
