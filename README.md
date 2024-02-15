@@ -65,7 +65,7 @@ deploy       Deploy infrastructure
 outdated     Check for outdated dependencies
 upgrade      Upgrade dependencies
 clean        Delete artifacts
-checks       Runs lint, typecheck, and test
+checks       Runs lint, typecheck, test and build
 tag          Tags the current commit using CalVer
 unreleased   Lists the commits since the latest tag
 ```
