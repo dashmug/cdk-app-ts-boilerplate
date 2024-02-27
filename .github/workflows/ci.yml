@@ -15,13 +15,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.12.0
+        uses: styfle/cancel-workflow-action@0.12.1
         with:
           access_token: ${{ github.token }}
 
       - uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup@v2.4.0
+      - uses: pnpm/action-setup@v3
         with:
           version: 8.6.5
 
@@ -57,13 +57,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.12.0
+        uses: styfle/cancel-workflow-action@0.12.1
         with:
           access_token: ${{ github.token }}
 
       - uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup@v2.4.0
+      - uses: pnpm/action-setup@v3
         with:
           version: 8.6.5
 
