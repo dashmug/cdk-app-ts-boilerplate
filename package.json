@@ -24,7 +24,7 @@
   "devDependencies": {
     "@commitlint/cli": "18.6.1",
     "@commitlint/config-conventional": "18.6.2",
-    "@types/aws-lambda": "8.10.134",
+    "@types/aws-lambda": "8.10.136",
     "@types/jest": "29.5.12",
     "@types/node": "20.11.20",
     "@typescript-eslint/eslint-plugin": "7.1.0",
