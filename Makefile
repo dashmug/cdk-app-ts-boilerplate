@@ -71,7 +71,7 @@ clean: ## Delete artifacts
 
 
 .PHONY: checks
-checks: lint typecheck test build ## Runs lint, typecheck, test and build
+checks: format typecheck test build ## Runs format, typecheck, test and build
 
 
 .PHONY: tag

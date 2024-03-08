@@ -22,16 +22,16 @@
     "prepare": "if command -v husky; then husky install; fi"
   },
   "devDependencies": {
-    "@commitlint/cli": "18.6.1",
-    "@commitlint/config-conventional": "18.6.2",
-    "@types/aws-lambda": "8.10.134",
+    "@commitlint/cli": "19.0.3",
+    "@commitlint/config-conventional": "19.0.3",
+    "@types/aws-lambda": "8.10.136",
     "@types/jest": "29.5.12",
-    "@types/node": "20.11.20",
-    "@typescript-eslint/eslint-plugin": "7.1.0",
-    "@typescript-eslint/parser": "7.1.0",
+    "@types/node": "20.11.25",
+    "@typescript-eslint/eslint-plugin": "7.1.1",
+    "@typescript-eslint/parser": "7.1.1",
     "eslint": "8.57.0",
     "eslint-config-airbnb-base": "15.0.0",
-    "eslint-config-airbnb-typescript": "17.1.0",
+    "eslint-config-airbnb-typescript": "18.0.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-import-resolver-typescript": "3.6.1",
     "eslint-plugin-import": "2.29.1",
@@ -49,12 +49,12 @@
   },
   "dependencies": {
     "@tsconfig/node20": "20.1.2",
-    "aws-cdk": "2.130.0",
-    "aws-cdk-lib": "2.130.0",
-    "cdk-nag": "2.28.47",
+    "aws-cdk": "2.131.0",
+    "aws-cdk-lib": "2.131.0",
+    "cdk-nag": "2.28.57",
     "constructs": "10.3.0",
     "ts-node": "10.9.2",
     "tsconfig-paths": "4.2.0",
-    "typescript": "5.3.3"
+    "typescript": "5.4.2"
   }
 }
