@@ -9,8 +9,8 @@ dependencies:
     specifier: 20.1.2
     version: 20.1.2
   aws-cdk:
-    specifier: 2.131.0
-    version: 2.131.0
+    specifier: 2.134.0
+    version: 2.134.0
   aws-cdk-lib:
     specifier: 2.131.0
     version: 2.131.0(constructs@10.3.0)
@@ -1515,8 +1515,8 @@ packages:
       - yaml
       - mime-types
 
-  /aws-cdk@2.131.0:
-    resolution: {integrity: sha512-ji+MwGFGC88HE/EqV6/VARBp5mu3nXIDa/GYwtGycJqu6WqXhNZXWeDH0JsWaY6+BSUdpY6pr6KWpV+MDyVkDg==}
+  /aws-cdk@2.134.0:
+    resolution: {integrity: sha512-/0rygJZpBMK4DQHciMH6ZR4bnQ80/6usHMXmJrvwbSpKFW2WpkYKwzpAxnnQeiyzfEIIUoB+oyIy7EmKS1HLtA==}
     engines: {node: '>= 14.15.0'}
     hasBin: true
     optionalDependencies:
