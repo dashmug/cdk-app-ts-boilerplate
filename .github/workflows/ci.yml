@@ -10,15 +10,14 @@ on:
 
 permissions: read-all
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
 jobs:
   continuous-integration:
     runs-on: ubuntu-latest
     steps:
-      - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.12.1
-        with:
-          access_token: ${{ github.token }}
-
       - uses: actions/checkout@v4
 
       - uses: pnpm/action-setup@v3
@@ -56,11 +55,6 @@ jobs:
   deployment-check:
     runs-on: ubuntu-latest
     steps:
-      - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.12.1
-        with:
-          access_token: ${{ github.token }}
-
       - uses: actions/checkout@v4
 
       - uses: pnpm/action-setup@v3
@@ -75,6 +69,8 @@ jobs:
 
       - name: Install Node dependencies for deployment
         run: pnpm install --production
+        env:
+          HUSKY: 0
 
       - name: Synthesize CloudFormation template and assets
         run: pnpm synth
