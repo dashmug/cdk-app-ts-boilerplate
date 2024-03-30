@@ -19,7 +19,7 @@
     "diff": "cdk diff",
     "deploy": "cdk deploy --strict --all --require-approval never",
     "destroy": "cdk destroy",
-    "prepare": "if command -v husky; then husky install; fi"
+    "prepare": "husky"
   },
   "devDependencies": {
     "@commitlint/cli": "19.2.1",

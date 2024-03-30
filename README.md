@@ -10,7 +10,7 @@ For building open-source constructs, I recommend using [`projen`](https://github
 ## Features
 
 - Latest (best-effort) versions of dependencies
-- Package management using `pnpm`
+- Package management using `yarn`
 - Strict Typescript config
 - Auto-formatting via `prettier`
 - Strict(ish) linting rules enforced by `eslint`
@@ -36,11 +36,11 @@ For building open-source constructs, I recommend using [`projen`](https://github
 ## Requirements
 
 - Node 20+
-- [pnpm](https://pnpm.io/) for package management
+- [yarn](https://classic.yarnpkg.com/) for package management
 
 ## Git Hooks
 
-A few git hooks are set up during the project setup process (`pnpm install`).
+A few git hooks are set up during the project setup process (`make install`).
 
 1. A `pre-commit` hook that runs some checks depending on the staged
    files. The hook itself is found at `.husky/pre-commit`.
@@ -65,7 +65,7 @@ deploy       Deploy infrastructure
 outdated     Check for outdated dependencies
 upgrade      Upgrade dependencies
 clean        Delete artifacts
-checks       Runs lint, typecheck, test and build
+checks       Runs format, typecheck, test and build
 tag          Tags the current commit using CalVer
 unreleased   Lists the commits since the latest tag
 ```

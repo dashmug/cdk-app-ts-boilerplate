@@ -1,4 +1,3 @@
 .cdk.staging
 cdk.out
 coverage
-pnpm-lock.yaml
