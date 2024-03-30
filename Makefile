@@ -16,7 +16,7 @@ help: ## Show help (default)
 .PHONY: install
 install: ## Install node dependencies
 	@pnpm install
-	@pnpm husky install
+	@pnpm husky init
 
 
 .PHONY: format

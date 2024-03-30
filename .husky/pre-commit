@@ -1,2 +1,1 @@
-# See lint-staged.config.js for details.
-pnpm lint-staged --verbose
+pnpm test
