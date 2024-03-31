@@ -6,5 +6,6 @@ declare namespace NodeJS {
     CDK_DEFAULT_ACCOUNT: string;
     CDK_DEFAULT_REGION: string;
     GITHUB_SHA: string;
+    NAG: string;
   }
 }
