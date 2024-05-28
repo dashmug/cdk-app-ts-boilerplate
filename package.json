@@ -27,7 +27,7 @@
     "@types/aws-lambda": "8.10.136",
     "@types/jest": "29.5.12",
     "@types/node": "20.12.2",
-    "@typescript-eslint/eslint-plugin": "7.4.0",
+    "@typescript-eslint/eslint-plugin": "7.11.0",
     "@typescript-eslint/parser": "7.4.0",
     "eslint": "8.57.0",
     "eslint-config-airbnb-base": "15.0.0",
