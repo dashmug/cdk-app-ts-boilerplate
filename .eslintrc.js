@@ -13,7 +13,7 @@ module.exports = {
     "plugin:import/recommended",
     "plugin:import/typescript",
     "plugin:promise/recommended",
-    "plugin:sonarjs/recommended",
+    "plugin:sonarjs/recommended-legacy",
     "plugin:unicorn/recommended",
     "plugin:security/recommended-legacy",
     "prettier",
