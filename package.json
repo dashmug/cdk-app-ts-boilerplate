@@ -49,7 +49,7 @@
   },
   "dependencies": {
     "@tsconfig/node20": "20.1.6",
-    "aws-cdk": "2.1029.0",
+    "aws-cdk": "2.1109.0",
     "aws-cdk-lib": "2.214.0",
     "cdk-nag": "2.37.23",
     "constructs": "10.4.2",
