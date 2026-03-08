@@ -3,19 +3,21 @@
 
 # CDK App Typescript Boilerplate
 
-This is an opinionated boilerplate I use when building [AWS Cloud Development Kit (CDK)](https://aws.amazon.com/cdk/) applications.
+This is an opinionated boilerplate I use when building [AWS Cloud
+Development Kit (CDK)](https://aws.amazon.com/cdk/) applications.
 
-For building open-source constructs, I recommend using [`projen`](https://github.com/projen/projen)'s `awscdk-construct` project type.
+For building open-source constructs, I recommend using
+[`projen`](https://github.com/projen/projen)'s `awscdk-construct`
+project type.
 
 ## Features
 
 - Latest (best-effort) versions of dependencies
 - Package management using `yarn`
 - Strict Typescript config
-- Auto-formatting via `prettier`
-- Strict(ish) linting rules enforced by `eslint`
+- Auto-formatting and linting via `Biome`
 - Standard unit testing setup using `jest`
-- Git hooks via `husky` and `link-staged`
+- Git hooks via `husky` and `lint-staged`
 - Standard commit messages using `commitlint`
 - For VSCode users:
   - Recommended extensions
@@ -24,7 +26,8 @@ For building open-source constructs, I recommend using [`projen`](https://github
   - `Makefile` with pre-configured commands for convenience
 - For Github:
   - Built-in dependabot config
-  - Built-in Github Actions workflows for pull requests and `main` branch
+  - Built-in Github Actions workflows for pull requests and `main`
+    branch
   - Scanning for cloud infrastructure misconfigurations via `checkov`
   - `shellcheck` for checking shell scripts
 - CDK-specific:
@@ -35,17 +38,18 @@ For building open-source constructs, I recommend using [`projen`](https://github
 
 ## Requirements
 
-- Node 20+
+- Node 24+
 - [yarn](https://classic.yarnpkg.com/) for package management
 
 ## Git Hooks
 
-A few git hooks are set up during the project setup process (`make install`).
+A few git hooks are set up during the project setup process (`make
+install`).
 
 1. A `pre-commit` hook that runs some checks depending on the staged
    files. The hook itself is found at `.husky/pre-commit`.
-2. A `commit-msg` hook that checks whether the commit message conforms to
-   the `commitlint` spec. Allowed commit "types" are found in
+2. A `commit-msg` hook that checks whether the commit message conforms
+   to the `commitlint` spec. Allowed commit "types" are found in
    `commitlint.config.js`.
 
 ## Makefile targets
@@ -53,19 +57,20 @@ A few git hooks are set up during the project setup process (`make install`).
 ```
 ❯ make
 Available commands:
-help         Show help (default)
+all          Show help (default)
 install      Install node dependencies
 format       Format the project source code
 lint         Check for common errors
 typecheck    Check static type annotations
 synth        Synthesize deployment code
 build        Synthesize deployment code (alias of `synth`)
+nag          Execute CDK Nag checks
 test         Execute unit tests
 deploy       Deploy infrastructure
 outdated     Check for outdated dependencies
 upgrade      Upgrade dependencies
 clean        Delete artifacts
-checks       Runs format, typecheck, test and build
+checks       Runs format, typecheck, test and nag
 tag          Tags the current commit using CalVer
 unreleased   Lists the commits since the latest tag
 ```

@@ -14,12 +14,10 @@ install: ## Install node dependencies
 .PHONY: format
 format: ## Format the project source code
 	@yarn format
-	@yarn lint --fix
 
 
 .PHONY: lint
 lint: ## Check for common errors
-	@yarn prettier . --check
 	@yarn lint
 
 
@@ -35,6 +33,11 @@ synth: ## Synthesize deployment code
 
 .PHONY: build
 build: synth ## Synthesize deployment code (alias of `synth`)
+
+
+.PHONY: nag
+nag: ## Execute CDK Nag checks
+	@yarn nag
 
 
 .PHONY: test
@@ -60,11 +63,11 @@ upgrade: ## Upgrade dependencies
 
 .PHONY: clean
 clean: ## Delete artifacts
-	@rm -rf .eslintcache cdk.out coverage
+	@rm -rf cdk.out coverage
 
 
 .PHONY: checks
-checks: format typecheck test build ## Runs format, typecheck, test and build
+checks: format typecheck test nag ## Runs format, typecheck, test and nag
 
 
 .PHONY: tag

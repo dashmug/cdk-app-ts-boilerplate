@@ -41,6 +41,3 @@ coverage
 
 # Error logs
 yarn-error.log
-
-# ESLint Cache
-.eslintcache

@@ -8,7 +8,7 @@ on:
     branches:
       - "**"
 
-permissions: read-all
+permissions: {}
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -19,19 +19,18 @@ jobs:
     name: Standard NodeJS checks
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
-
-      - name: Set up Node 20.x
-        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
-          node-version: "20.x"
+          persist-credentials: false
+
+      - name: Set up Node 24.x
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version: "24.x"
           cache: "yarn"
 
       - name: Install Node dependencies
         run: yarn install --frozen-lockfile
-
-      - name: Check uncommitted formatting changes
-        run: yarn prettier . --check
 
       - name: Check for linting errors
         run: yarn lint
@@ -42,16 +41,21 @@ jobs:
       - name: Test
         run: yarn test --ci
 
+      - name: Nag Checks
+        run: yarn nag
+
   deployment-check:
     name: Check deployment artifacts
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
-
-      - name: Set up Node 20.x
-        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
-          node-version: "20.x"
+          persist-credentials: false
+
+      - name: Set up Node 24.x
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version: "24.x"
           cache: "yarn"
 
       - name: Install Node dependencies for deployment
@@ -78,7 +82,9 @@ jobs:
     name: Check shell scripts
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
 
       - uses: ludeeus/action-shellcheck@00cae500b08a931fb5698e11e79bfbd38e612a38 # 2.0.0
         with:
