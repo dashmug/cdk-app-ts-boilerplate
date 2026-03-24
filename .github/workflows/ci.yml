@@ -67,13 +67,13 @@ jobs:
         run: yarn synth
 
       - name: Check synthesized CloudFormation template with Checkov
-        uses: bridgecrewio/checkov-action@99bb2caf247dfd9f03cf984373bc6043d4e32ebf # v12.1347.0
+        uses: bridgecrewio/checkov-action@2fd3901c8feb52417f27f0d9800259a106c1ec1e # v12.3089.0
         with:
           directory: cdk.out
           framework: cloudformation
 
       - name: Check Github Actions configuration with Checkov
-        uses: bridgecrewio/checkov-action@99bb2caf247dfd9f03cf984373bc6043d4e32ebf # v12.1347.0
+        uses: bridgecrewio/checkov-action@2fd3901c8feb52417f27f0d9800259a106c1ec1e # v12.3089.0
         with:
           directory: .github
           framework: github_actions
