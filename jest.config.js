@@ -11,9 +11,4 @@ module.exports = {
 			},
 		],
 	},
-	moduleNameMapper: {
-		"^bin/(.*)$": "<rootDir>/bin/$1",
-		"^src/(.*)$": "<rootDir>/src/$1",
-		"package.json$": "<rootDir>/package.json",
-	},
 };

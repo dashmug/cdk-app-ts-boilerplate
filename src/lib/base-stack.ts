@@ -1,6 +1,6 @@
 import { Stack, type StackProps, Tags } from "aws-cdk-lib";
 import type { Construct } from "constructs";
-import * as packageInfo from "package.json";
+import * as packageInfo from "../../package.json";
 
 /**
  * A base stack class with preset environment and resource tags that are

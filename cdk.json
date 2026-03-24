@@ -1,5 +1,5 @@
 {
-	"app": "ts-node --prefer-ts-exts bin/app.ts",
+	"app": "tsx --trace-deprecation --unhandled-rejections=strict bin/app.ts",
 	"watch": {
 		"include": ["bin/*.ts", "src/**/*.ts"]
 	},

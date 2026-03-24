@@ -3,7 +3,7 @@ import { Template } from "aws-cdk-lib/assertions";
 import { Bucket } from "aws-cdk-lib/aws-s3";
 import { Queue } from "aws-cdk-lib/aws-sqs";
 import type { Construct } from "constructs";
-import { BaseStack } from "src/lib/base-stack";
+import { BaseStack } from "../base-stack";
 
 class TestStack extends BaseStack {
 	constructor(scope: Construct, id: string, props?: StackProps) {

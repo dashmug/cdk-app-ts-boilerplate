@@ -1,6 +1,6 @@
 import { App } from "aws-cdk-lib";
 import { Template } from "aws-cdk-lib/assertions";
-import { MyProjectStack } from "src/stacks/project";
+import { MyProjectStack } from "../project";
 
 describe("MyProjectStack", () => {
 	const app = new App();

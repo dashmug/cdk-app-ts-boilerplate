@@ -5,7 +5,7 @@ import {
 	TableEncryption,
 } from "aws-cdk-lib/aws-dynamodb";
 import type { Construct } from "constructs";
-import { BaseStack } from "src/lib/base-stack";
+import { BaseStack } from "../lib/base-stack";
 
 /**
  * The stack that defines the resources for the project.

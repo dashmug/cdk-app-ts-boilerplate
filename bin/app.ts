@@ -1,7 +1,7 @@
 import * as cdk from "aws-cdk-lib";
 import { Aspects } from "aws-cdk-lib";
 import { AwsSolutionsChecks, ServerlessChecks } from "cdk-nag";
-import { MyProjectStack } from "src/stacks/project";
+import { MyProjectStack } from "../src/stacks/project";
 
 const app = new cdk.App();
 

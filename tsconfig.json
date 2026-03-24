@@ -4,9 +4,10 @@
 		"sourceMap": true,
 		"removeComments": true,
 		"noEmit": true,
-		"baseUrl": ".",
 		"resolveJsonModule": true,
-		"typeRoots": ["./node_modules/@types", "./typings"],
+		// "typeRoots": ["./node_modules/@types", "./typings"],
+		"types": ["node", "jest"],
+		"strict": true,
 		"allowUnusedLabels": false,
 		"allowUnreachableCode": false,
 		"exactOptionalPropertyTypes": true,
@@ -22,9 +23,5 @@
 		"isolatedModules": true
 	},
 	"include": ["**/*.ts", "**.js", "**/*.js"],
-	"exclude": ["node_modules", "cdk.out", "coverage"],
-	"ts-node": {
-		"require": ["tsconfig-paths/register"],
-		"transpileOnly": true
-	}
+	"exclude": ["node_modules", "cdk.out", "coverage"]
 }
