@@ -37,7 +37,7 @@
 		"@tsconfig/node24": "24.0.4",
 		"aws-cdk": "2.1113.0",
 		"aws-cdk-lib": "2.244.0",
-		"cdk-nag": "2.37.55",
+		"cdk-nag": "2.38.2",
 		"constructs": "10.6.0",
 		"tsconfig-paths": "4.2.0",
 		"tsx": "4.21.0",
